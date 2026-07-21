@@ -19,11 +19,11 @@ public class Livro {
     }
 
     public void setNumCadastro(int numCadastro) {
-        numCadastro = numCadastro;
+        if (numCadastro > 0) {
+        this.numCadastro = numCadastro; }
     }
 
     public Livro (String nome, int numCadastro) {
-
         setNome(nome);
         setNumCadastro(numCadastro);
 
