@@ -2,6 +2,7 @@ package Sistema;
 
 public class Biblioteca {
 
+    // Controlam quantas posições dos arrays já estão preenchidas de fato
     private int quantidadeAlunos, quantidadeLivros;
 
     private Livro[] acervo = new Livro[20];
@@ -23,6 +24,7 @@ public class Biblioteca {
         this.quantidadeLivros = quantidadeLivros;
     }
 
+    // Adiciona aluno se ainda tiver espaço no array
     public void adicionarAluno(Aluno aluno) {
         if (quantidadeAlunos < 10) {
             alunos[quantidadeAlunos] = aluno;
@@ -30,6 +32,7 @@ public class Biblioteca {
         }
     }
 
+    // Mesma lógica, só que pro acervo de livros
     public void adicionarLivro(Livro livro) {
         if (quantidadeLivros < 20) {
             acervo[quantidadeLivros] = livro;
@@ -37,9 +40,16 @@ public class Biblioteca {
         }
     }
 
+    // Percorre só até quantidadeLivros pra não imprimir posição vazia
     public void listarLivros() {
         for (int i = 0; i < quantidadeLivros; i++) {
             System.out.print(acervo[i].getNome());
+        }
+    }
+
+    public void listarAlunos() {
+        for (int i = 0; i < quantidadeAlunos; i++) {
+            System.out.print(alunos[i].getNome());
         }
     }
 }
