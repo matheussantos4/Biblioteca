@@ -46,6 +46,11 @@ public class Biblioteca {
     // Percorre só até quantidadeLivros pra não imprimir posição vazia
     public void listarLivros() {
         for (int i = 0; i < quantidadeLivros; i++) {
+
+            /* Do array acervo, consiga o nome
+            através do metodo get com a ajuda
+            do posicionamento do contador i.
+             */
             System.out.print(acervo[i].getNome());
         }
     }
@@ -54,9 +59,8 @@ public class Biblioteca {
         for (int i = 0; i < quantidadeAlunos; i++) {
 
             /* Do array alunos, consiga o nome
-            através do metodo get estabelecido
-            com a ajuda do posicionamento do
-            contador i.
+            através do metodo get com a ajuda
+            do posicionamento do contador i.
              */
             System.out.print(alunos[i].getNome());
         }
