@@ -8,9 +8,10 @@ public class Livro {
         return nome;
     }
 
+    // Evita nome nulo ou vazio
     public void setNome(String nome) {
         if (nome != null && !nome.isBlank()) {
-        this.nome = nome;
+            this.nome = nome;
         }
     }
 
@@ -18,14 +19,16 @@ public class Livro {
         return numCadastro;
     }
 
+    // Só aceita número de cadastro positivo
     public void setNumCadastro(int numCadastro) {
         if (numCadastro > 0) {
-        this.numCadastro = numCadastro; }
+            this.numCadastro = numCadastro;
+        }
     }
 
-    public Livro (String nome, int numCadastro) {
+    // Construtor já valida tudo passando pelos setters
+    public Livro(String nome, int numCadastro) {
         setNome(nome);
         setNumCadastro(numCadastro);
-
     }
 }
