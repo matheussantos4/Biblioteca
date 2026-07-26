@@ -23,13 +23,23 @@ public class Biblioteca {
         this.quantidadeLivros = quantidadeLivros;
     }
 
-    public void adicionarlivro(Livro livro) {
+    public void adicionarAluno(Aluno aluno) {
+        if (quantidadeAlunos < 10) {
+            alunos[quantidadeAlunos] = aluno;
+            quantidadeAlunos++;
+        }
+    }
+
+    public void adicionarLivro(Livro livro) {
         if (quantidadeLivros < 20) {
             acervo[quantidadeLivros] = livro;
             quantidadeLivros++;
         }
-
-
     }
 
+    public void listarLivros() {
+        for (int i = 0; i < quantidadeLivros; i++) {
+            System.out.print(acervo[i].getNome());
+        }
+    }
 }
