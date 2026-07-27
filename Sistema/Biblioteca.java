@@ -51,7 +51,7 @@ public class Biblioteca {
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
-            System.out.print(acervo[i].getNome());
+            System.out.printf(acervo[i].getNome() + " | ");
         }
     }
 
@@ -62,7 +62,7 @@ public class Biblioteca {
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
-            System.out.print(alunos[i].getNome());
+            System.out.printf(alunos[i].getNome() + " | ");
         }
     }
 }
