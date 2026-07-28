@@ -9,25 +9,27 @@ public class Biblioteca {
     // Array da quantidade total de alunos.
     private ArrayList<Aluno> alunos = new ArrayList<>();
 
-    // Adiciona aluno se ainda tiver espaço no array
+    // Adiciona aluno.
     public void adicionarAluno(Aluno aluno) {
         alunos.add(aluno);
     }
 
-    // Adiciona livro se ainda tiver espaço no array
+    // Adiciona livro.
     public void adicionarLivro(Livro livro) {
         acervo.add(livro);
     }
 
+    // Remove aluno.
     public void removerAluno(Aluno aluno) {
         alunos.remove(aluno);
     }
 
+    // Remove livro.
     public void removerLivro(Livro livro) {
         acervo.remove(livro);
     }
 
-    // Percorre só até quantidadeLivros pra não imprimir posição vazia
+    // Percorre o array completo de acordo com oque há nele.
     public void listarLivros() {
         for (int i = 0; i < acervo.size(); i++) {
 
@@ -35,6 +37,7 @@ public class Biblioteca {
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
+
             System.out.printf(acervo.get(i).getNome());
         }
     }
@@ -46,6 +49,7 @@ public class Biblioteca {
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
+
             System.out.printf(alunos.get(i).getNome());
         }
     }
