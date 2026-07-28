@@ -21,7 +21,7 @@ public class Livro {
 
     // Só aceita número de cadastro positivo
     public void setNumCadastro(int numCadastro) {
-        if (numCadastro >= 0 && numCadastro <= 20) {
+        if (numCadastro >= 0) {
             this.numCadastro = numCadastro;
         }
     }

@@ -1,6 +1,7 @@
 package Sistema;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,13 +47,13 @@ public class Main {
 
                 int ID = sc.nextInt();
 
-                if (ID <= 0 || ID > 20) {
+                if (ID <= 0) {
                     do {
                         System.out.println("ID inválido.");
                         System.out.print("Digite outro ID: ");
                         ID = sc.nextInt();
 
-                    } while (ID <= 0 || ID > 20);
+                    } while (ID <= 0);
                 }
 
                 Livro livronovo = new Livro(nome, ID);
