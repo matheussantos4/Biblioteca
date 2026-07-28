@@ -1,5 +1,6 @@
 package Sistema;
 
+import java.net.IDN;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -9,23 +10,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Biblioteca b1 = new Biblioteca();
-        Livro liv1 = new Livro("Crime e castigo.", 01);
         Aluno a1 = new Aluno("Matheus", 01);
-
-        b1.adicionarLivro(liv1);
 
         int opcao = 0;
 
         do {
             System.out.println("Selecione uma opção");
             System.out.println("(1) Adicionar livro.");
-            System.out.println("(2) Listar livros.");
-            System.out.println("(3) Adicionar alunos.");
-            System.out.println("(4) Listar alunos.");
-            System.out.println("(5) Sair.");
+            System.out.println("(2) Remover livro.");
+            System.out.println("(3) Listar livros.");
+            System.out.println("(4) Adicionar aluno.");
+            System.out.println("(5) Remover aluno.");
+            System.out.println("(6) Listar alunos.");
+            System.out.println("(7) Sair.");
             opcao = sc.nextInt();
 
-            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5) {
+            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7) {
                 System.out.println("Opção inválida.");
 
             } else if (opcao == 1) {
@@ -63,11 +63,15 @@ public class Main {
                 System.out.println();
 
             } else if (opcao == 2) {
+                System.out.println("Qual livro quer remover ?");
+                b1.listarLivros();
+
+            } else if (opcao == 3) {
                 b1.listarLivros();
                 System.out.println();
                 System.out.println();
 
-            } else if (opcao == 3) {
+            } else if (opcao == 4) {
 
                 System.out.print("Digite o nome do aluno: ");
 
@@ -99,13 +103,14 @@ public class Main {
 
                 System.out.println("Aluno adicionado!");
 
-            } else if (opcao == 4) {
+            } else if (opcao == 5) {
+            } else if (opcao == 6) {
                 b1.listarAlunos();
                 System.out.println();
                 System.out.println();
             }
 
-        } while (opcao != 5);
+        } while (opcao != 7);
         System.out.println("Saindo...");
 
         sc.close();

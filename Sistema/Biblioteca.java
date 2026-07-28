@@ -38,7 +38,8 @@ public class Biblioteca {
             do posicionamento do contador i.
              */
 
-            System.out.printf(acervo.get(i).getNome());
+            System.out.printf(" ID:" + (acervo.get(i).getNumCadastro()) + " Nome:" + acervo.get(i).getNome() + " %n");
+
         }
     }
 
@@ -50,7 +51,7 @@ public class Biblioteca {
             do posicionamento do contador i.
              */
 
-            System.out.printf(alunos.get(i).getNome());
+            System.out.printf(alunos.get(i).getNome() + " ");
         }
     }
 }
