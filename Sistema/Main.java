@@ -1,6 +1,7 @@
 package Sistema;
 
 import java.net.IDN;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -13,6 +14,12 @@ public class Main {
 
         // Objetos teste.
         Aluno a1 = new Aluno("Matheus", 01);
+        Aluno a2 = new Aluno("Bruno", 92);
+        Aluno a3 = new Aluno("Guilherme", 03);
+
+        b1.adicionarAluno(a1);
+        b1.adicionarAluno(a2);
+        b1.adicionarAluno(a3);
 
         int opcao = 0;
 
@@ -55,7 +62,7 @@ public class Main {
                     do {
                         // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
-                        System.out.print("Digite outro ID: ");
+                        System.out.print("Tente novamente: ");
                         IDlivro = sc.nextInt();
 
                     } while (IDlivro <= 0);
@@ -71,13 +78,17 @@ public class Main {
                 System.out.println();
 
             } else if (opcao == 2) {
+                // Lógica da remoção dos livros.
                 System.out.println("Qual livro quer remover ?");
                 b1.listarLivros();
                 System.out.print("Digite o ID: ");
+
                 int IDremover = sc.nextInt();
+
                 if (IDremover <= 0) {
                     do {
                         System.out.println("ID inválido.");
+                        System.out.print("Tente novamente: ");
                         IDremover = sc.nextInt();
 
                     } while (IDremover <= 0);
@@ -88,7 +99,6 @@ public class Main {
 
             } else if (opcao == 3) {
                 b1.listarLivros();
-                System.out.println();
                 System.out.println();
 
             } else if (opcao == 4) {
@@ -114,7 +124,7 @@ public class Main {
                     do {
                         // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
-                        System.out.print("Digite outro ID: ");
+                        System.out.print("Tente novamente: ");
                         IDaluno = sc.nextInt();
 
                     } while (IDaluno <= 0 || IDaluno >= 20);
@@ -129,9 +139,27 @@ public class Main {
                 System.out.println("Aluno adicionado!");
 
             } else if (opcao == 5) {
+
+                System.out.println("Qual aluno quer remover ?");
+                b1.listarAlunos();
+                System.out.print("Digite o ID: ");
+
+                int idRemover = sc.nextInt();
+
+                if (idRemover <= 0) {
+                    do {
+                        System.out.println("ID inválido.");
+                        System.out.print("Tente novamente: ");
+                        idRemover = sc.nextInt();
+
+                    } while (idRemover <= 0);
+                }
+                b1.removerAluno(idRemover);
+
+                System.out.println("Aluno removido!");
+
             } else if (opcao == 6) {
                 b1.listarAlunos();
-                System.out.println();
                 System.out.println();
             }
 

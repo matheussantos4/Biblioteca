@@ -20,13 +20,15 @@ public class Biblioteca {
     }
 
     // Remove aluno.
-    public void removerAluno(Aluno aluno) {
-        alunos.remove(aluno);
+    public void removerAluno(int ID) {
+        alunos.remove(ID);
     }
 
     // Remove livro.
     public void removerLivro(int ID) {
-        acervo.remove(ID);
+        for (int i = 0; i != acervo.get(ID).getNumCadastro(); i++) {
+            acervo.remove(ID);
+        }
     }
 
     // Percorre o array completo de acordo com oque há nele.
@@ -50,8 +52,7 @@ public class Biblioteca {
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
-
-            System.out.printf(alunos.get(i).getNome() + " ");
+            System.out.printf(" ID:" + alunos.get(i).getNumPessoa() + " Nome:" + alunos.get(i).getNome() + " %n");
         }
     }
 }
