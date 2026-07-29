@@ -25,6 +25,7 @@ public class Main {
             System.out.println("(7) Sair.");
             opcao = sc.nextInt();
 
+            // Definição das únicas opções existentes no programa.
             if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7) {
                 System.out.println("Opção inválida.");
 
@@ -36,6 +37,7 @@ public class Main {
 
                 if (nome == null || nome.isBlank()) {
                     do {
+                        // Condicional apenas se o nome não estiver de acordo.
                         System.out.println("Nome inválido.");
                         System.out.print("Digite outro nome: ");
                         nome = sc.nextLine();
@@ -49,12 +51,16 @@ public class Main {
 
                 if (ID <= 0) {
                     do {
+                        // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
                         System.out.print("Digite outro ID: ");
                         ID = sc.nextInt();
 
                     } while (ID <= 0);
                 }
+
+                // Criação do objeto Livro a partir das
+                // Informações fornecidas pelo usuário.
 
                 Livro livronovo = new Livro(nome, ID);
                 b1.adicionarLivro(livronovo);
@@ -80,6 +86,7 @@ public class Main {
 
                 if (nomealuno == null || nomealuno.isBlank()) {
                     do {
+                        // Condicional apenas se o nome não estiver de acordo.
                         System.out.println("Nome inválido.");
                         System.out.print("Digite outro nome: ");
                         nomealuno = sc.nextLine();
@@ -91,12 +98,16 @@ public class Main {
 
                 if (IDaluno <= 0 || IDaluno >= 20) {
                     do {
+                        // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
                         System.out.print("Digite outro ID: ");
                         IDaluno = sc.nextInt();
 
                     } while (IDaluno <= 0 || IDaluno >= 20);
                 }
+
+                // Criação do objeto Aluno a partir das
+                // Informações fornecidas pelo usuário.
 
                 Aluno alunonovo = new Aluno(nomealuno, IDaluno);
                 b1.adicionarAluno(alunonovo);
