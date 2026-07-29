@@ -12,7 +12,7 @@ public class Main {
 
         Biblioteca b1 = new Biblioteca();
 
-        // Objetos teste.
+        /* Objetos teste.
         Aluno a1 = new Aluno("Matheus", 01);
         Aluno a2 = new Aluno("Bruno", 92);
         Aluno a3 = new Aluno("Guilherme", 03);
@@ -22,11 +22,13 @@ public class Main {
         b1.adicionarAluno(a1);
         b1.adicionarAluno(a2);
         b1.adicionarAluno(a3);
-        b1.adicionarLivro(liv1);
+        b1.adicionarLivro(liv1); */
 
         int opcao = 0;
 
         do {
+
+            // Opções funcionais disponíveis.
             System.out.println("Selecione uma opção");
             System.out.println("(1) Adicionar livro.");
             System.out.println("(2) Remover livro.");
@@ -42,6 +44,8 @@ public class Main {
                 System.out.println("Opção inválida.");
 
             } else if (opcao == 1) {
+
+                // Lógica da adição dos livros.
                 System.out.print("Digite o nome do livro: ");
 
                 sc.nextLine();
@@ -81,6 +85,7 @@ public class Main {
                 System.out.println();
 
             } else if (opcao == 2) {
+
                 // Lógica da remoção dos livros.
                 System.out.println("Qual livro quer remover ?");
                 b1.listarLivros();
@@ -106,6 +111,7 @@ public class Main {
 
             } else if (opcao == 4) {
 
+                // Lógica da adição dos livros.
                 System.out.print("Digite o nome do aluno: ");
 
                 sc.nextLine();
@@ -143,12 +149,14 @@ public class Main {
 
             } else if (opcao == 5) {
 
+                // Lógica de remoção Alunos.
                 System.out.println("Qual aluno quer remover ?");
                 b1.listarAlunos();
                 System.out.print("Digite o ID: ");
 
                 int idRemover = sc.nextInt();
 
+                // Condicional apenas se ID não estiver de acordo.
                 if (idRemover <= 0) {
                     do {
                         System.out.println("ID inválido.");
@@ -167,6 +175,8 @@ public class Main {
             }
 
         } while (opcao != 7);
+
+        // Encerramento do programa.
         System.out.println("Saindo...");
 
         sc.close();
