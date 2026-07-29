@@ -21,13 +21,19 @@ public class Biblioteca {
 
     // Remove aluno.
     public void removerAluno(int ID) {
-        alunos.remove(ID);
+        for (int i = 0; i < alunos.size(); i++) {
+            if (alunos.get(i).getNumPessoa() == ID) {
+                alunos.remove(i);
+            }
+        }
     }
 
     // Remove livro.
     public void removerLivro(int ID) {
-        for (int i = 0; i != acervo.get(ID).getNumCadastro(); i++) {
-            acervo.remove(ID);
+        for (int i = 0; i < acervo.size(); i++) {
+            if (acervo.get(i).getNumCadastro() == ID) {
+                acervo.remove(i);
+            }
         }
     }
 

@@ -17,6 +17,13 @@ public class Main {
         Aluno a2 = new Aluno("Bruno", 92);
         Aluno a3 = new Aluno("Guilherme", 03);
 
+        Livro liv1 = new Livro("Teste", 92);
+
+        b1.adicionarAluno(a1);
+        b1.adicionarAluno(a2);
+        b1.adicionarAluno(a3);
+        b1.adicionarLivro(liv1);
+
         int opcao = 0;
 
         do {
@@ -150,8 +157,8 @@ public class Main {
 
                     } while (idRemover <= 0);
                 }
-                b1.removerAluno(idRemover);
 
+                b1.removerAluno(idRemover);
                 System.out.println("Aluno removido!");
 
             } else if (opcao == 6) {
