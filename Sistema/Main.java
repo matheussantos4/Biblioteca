@@ -1,9 +1,6 @@
 package Sistema;
 
-import java.net.IDN;
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -111,7 +108,7 @@ public class Main {
 
             } else if (opcao == 4) {
 
-                // Lógica da adição dos livros.
+                // Lógica da adição dos alunos.
                 System.out.print("Digite o nome do aluno: ");
 
                 sc.nextLine();
@@ -129,14 +126,14 @@ public class Main {
                 System.out.print("ID aluno: ");
                 int IDaluno = sc.nextInt();
 
-                if (IDaluno <= 0 || IDaluno >= 20) {
+                if (IDaluno <= 0) {
                     do {
                         // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
                         System.out.print("Tente novamente: ");
                         IDaluno = sc.nextInt();
 
-                    } while (IDaluno <= 0 || IDaluno >= 20);
+                    } while (IDaluno <= 0);
                 }
 
                 // Criação do objeto Aluno a partir das
