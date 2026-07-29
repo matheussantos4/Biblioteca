@@ -10,6 +10,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Biblioteca b1 = new Biblioteca();
+
+        // Objetos teste.
         Aluno a1 = new Aluno("Matheus", 01);
 
         int opcao = 0;
@@ -47,22 +49,22 @@ public class Main {
 
                 System.out.print("Digite o ID do livro: ");
 
-                int ID = sc.nextInt();
+                int IDlivro = sc.nextInt();
 
-                if (ID <= 0) {
+                if (IDlivro <= 0) {
                     do {
                         // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
                         System.out.print("Digite outro ID: ");
-                        ID = sc.nextInt();
+                        IDlivro = sc.nextInt();
 
-                    } while (ID <= 0);
+                    } while (IDlivro <= 0);
                 }
 
                 // Criação do objeto Livro a partir das
                 // Informações fornecidas pelo usuário.
 
-                Livro livronovo = new Livro(nome, ID);
+                Livro livronovo = new Livro(nome, IDlivro);
                 b1.adicionarLivro(livronovo);
 
                 System.out.println("Livro adicionado!");
@@ -71,6 +73,18 @@ public class Main {
             } else if (opcao == 2) {
                 System.out.println("Qual livro quer remover ?");
                 b1.listarLivros();
+                System.out.print("Digite o ID: ");
+                int IDremover = sc.nextInt();
+                if (IDremover <= 0) {
+                    do {
+                        System.out.println("ID inválido.");
+                        IDremover = sc.nextInt();
+
+                    } while (IDremover <= 0);
+                }
+
+                b1.removerLivro(IDremover);
+                System.out.println("Livro removido!");
 
             } else if (opcao == 3) {
                 b1.listarLivros();

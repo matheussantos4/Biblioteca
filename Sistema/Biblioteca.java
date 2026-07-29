@@ -25,8 +25,8 @@ public class Biblioteca {
     }
 
     // Remove livro.
-    public void removerLivro(Livro livro) {
-        acervo.remove(livro);
+    public void removerLivro(int ID) {
+        acervo.remove(ID);
     }
 
     // Percorre o array completo de acordo com oque há nele.
@@ -38,7 +38,7 @@ public class Biblioteca {
             do posicionamento do contador i.
              */
 
-            System.out.printf(" ID:" + (acervo.get(i).getNumCadastro()) + " Nome:" + acervo.get(i).getNome() + " %n");
+            System.out.printf(" ID:" + (acervo.get(i).getNumCadastro()) + " Nome:" + acervo.get(i).getNome() + "%n");
 
         }
     }
