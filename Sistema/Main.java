@@ -17,10 +17,6 @@ public class Main {
         Aluno a2 = new Aluno("Bruno", 92);
         Aluno a3 = new Aluno("Guilherme", 03);
 
-        b1.adicionarAluno(a1);
-        b1.adicionarAluno(a2);
-        b1.adicionarAluno(a3);
-
         int opcao = 0;
 
         do {
