@@ -19,7 +19,7 @@ public class Biblioteca {
         acervo.add(livro);
     }
 
-    // Remove aluno.
+    // Remove aluno pelo ID.
     public void removerAluno(int ID) {
         for (int i = 0; i < alunos.size(); i++) {
             if (alunos.get(i).getNumPessoa() == ID) {
@@ -28,7 +28,7 @@ public class Biblioteca {
         }
     }
 
-    // Remove livro.
+    // Remove livro pelo ID.
     public void removerLivro(int ID) {
         for (int i = 0; i < acervo.size(); i++) {
             if (acervo.get(i).getNumCadastro() == ID) {
@@ -37,7 +37,7 @@ public class Biblioteca {
         }
     }
 
-    // Percorre o array completo de acordo com oque há nele.
+    // Listar todos livros de acordo com oque há no array.
     public void listarLivros() {
         for (int i = 0; i < acervo.size(); i++) {
 
@@ -51,6 +51,7 @@ public class Biblioteca {
         }
     }
 
+    // Listar todos Alunos de acordo com oque há no array.
     public void listarAlunos() {
         for (int i = 0; i < alunos.size(); i++) {
 
@@ -58,6 +59,7 @@ public class Biblioteca {
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
+
             System.out.printf(" ID:" + alunos.get(i).getNumPessoa() + " Nome:" + alunos.get(i).getNome() + " %n");
         }
     }
