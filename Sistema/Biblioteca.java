@@ -29,6 +29,7 @@ public class Biblioteca {
         }
     }
 
+    // Lógica metodo para modificação nome livro.
     public void MudarNomeLivro(int ID, String nome) {
         for (int i = 0; i < acervo.size(); i++) {
             if (acervo.get(i).getNumCadastro() == ID) {
@@ -38,6 +39,7 @@ public class Biblioteca {
         }
     }
 
+    // Lógica metodo para modificação nome aluno.
     public void MudarNomeAluno(int ID, String nome) {
         for (int i = 0; i < alunos.size(); i++) {
             if (alunos.get(i).getNumPessoa() == ID) {
