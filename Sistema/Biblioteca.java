@@ -29,6 +29,16 @@ public class Biblioteca {
         }
     }
 
+    public void MudarNomeLivro(int ID, String nome) {
+        for (int i = 0; i < acervo.size(); i++) {
+            if (acervo.get(i).getNumCadastro() == ID) {
+                acervo.get(i).setNome(nome);
+                break;
+            }
+        }
+    }
+
+
     // Verifica se já existe um aluno cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteAluno(int ID) {
         for (int i = 0; i < alunos.size(); i++) {
