@@ -31,6 +31,7 @@ public class Biblioteca {
         }
     }
 
+    // Verifica se já existe um aluno cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteAlu(int ID) {
         for (int i = 0; i < alunos.size(); i++) {
             if (alunos.get(i).getNumPessoa() == ID) {
@@ -40,6 +41,7 @@ public class Biblioteca {
         return false;
     }
 
+    // Verifica se já existe um livro cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteLiv(int ID) {
         for (int i = 0; i < acervo.size(); i++) {
             if (acervo.get(i).getNumCadastro() == ID) {
