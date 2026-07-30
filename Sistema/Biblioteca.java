@@ -1,5 +1,8 @@
 package Sistema;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Biblioteca {
@@ -26,6 +29,24 @@ public class Biblioteca {
                 alunos.remove(i);
             }
         }
+    }
+
+    public boolean jaExisteAlu(int ID) {
+        for (int i = 0; i < alunos.size(); i++) {
+            if (alunos.get(i).getNumPessoa() == ID) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean jaExisteLiv(int ID) {
+        for (int i = 0; i < acervo.size(); i++) {
+            if (acervo.get(i).getNumCadastro() == ID) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // Remove livro pelo ID.

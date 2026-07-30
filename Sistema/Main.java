@@ -67,9 +67,20 @@ public class Main {
                         // Condicional apenas se ID não estiver de acordo.
                         System.out.println("ID inválido.");
                         System.out.print("Tente novamente: ");
+
                         IDlivro = sc.nextInt();
 
                     } while (IDlivro <= 0);
+                }
+                if (b1.jaExisteLiv(IDlivro)) {
+                    do {
+                        // Segunda condicional de validação caso
+                        // ID digitado ja existir.
+                        System.out.println("ID já existente.");
+                        System.out.print("Tente novamente: ");
+                        IDlivro = sc.nextInt();
+
+                    } while (b1.jaExisteLiv(IDlivro));
                 }
 
                 // Criação do objeto Livro a partir das
@@ -138,14 +149,16 @@ public class Main {
 
                     } while (IDaluno <= 0);
                 }
-                if (b1.jaExiste(IDaluno)) {
+                if (b1.jaExisteAlu(IDaluno)) {
                     do {
+                        // Segunda condicional de validação caso
+                        // ID digitado ja existir.
                         System.out.println("ID já existente.");
                         System.out.print("Tente novamente: ");
 
                         IDaluno = sc.nextInt();
 
-                    } while (b1.jaExiste(IDaluno));
+                    } while (b1.jaExisteAlu(IDaluno));
                 }
                 // Criação do objeto Aluno a partir das
                 // Informações fornecidas pelo usuário.
