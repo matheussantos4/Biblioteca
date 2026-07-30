@@ -204,7 +204,19 @@ public class Main {
                 String nomeNovo = sc.nextLine();
                 b1.MudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
                 System.out.println("Cadastro atualizado!");
-            }
+
+            } else if (opcao == 8) {
+
+                System.out.println("Qual aluno quer modificar? ");
+                b1.listarAlunos();
+                System.out.print("Digite o ID:");
+                int IDmodificarNomeAluno = sc.nextInt();
+
+                System.out.print("Qual novo nome do aluno? ");
+                sc.nextLine();
+                String nomeNovo = sc.nextLine();
+                b1.MudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
+                System.out.println("Cadastro atualizado!");
 
         }
         while (opcao != 7);
