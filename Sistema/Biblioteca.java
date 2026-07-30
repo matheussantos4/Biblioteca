@@ -1,8 +1,5 @@
 package Sistema;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Biblioteca {
@@ -27,12 +24,13 @@ public class Biblioteca {
         for (int i = 0; i < alunos.size(); i++) {
             if (alunos.get(i).getNumPessoa() == ID) {
                 alunos.remove(i);
+                break;
             }
         }
     }
 
     // Verifica se já existe um aluno cadastrado com esse ID (evita duplicatas)
-    public boolean jaExisteAlu(int ID) {
+    public boolean jaExisteAluno(int ID) {
         for (int i = 0; i < alunos.size(); i++) {
             if (alunos.get(i).getNumPessoa() == ID) {
                 return true;
@@ -42,7 +40,7 @@ public class Biblioteca {
     }
 
     // Verifica se já existe um livro cadastrado com esse ID (evita duplicatas)
-    public boolean jaExisteLiv(int ID) {
+    public boolean jaExisteLivro(int ID) {
         for (int i = 0; i < acervo.size(); i++) {
             if (acervo.get(i).getNumCadastro() == ID) {
                 return true;
@@ -56,6 +54,7 @@ public class Biblioteca {
         for (int i = 0; i < acervo.size(); i++) {
             if (acervo.get(i).getNumCadastro() == ID) {
                 acervo.remove(i);
+                break;
             }
         }
     }

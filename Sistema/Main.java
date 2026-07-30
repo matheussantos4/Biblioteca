@@ -72,7 +72,7 @@ public class Main {
 
                     } while (IDlivro <= 0);
                 }
-                if (b1.jaExisteLiv(IDlivro)) {
+                if (b1.jaExisteLivro(IDlivro)) {
                     do {
                         // Segunda condicional de validação caso
                         // ID digitado ja existir.
@@ -80,7 +80,7 @@ public class Main {
                         System.out.print("Tente novamente: ");
                         IDlivro = sc.nextInt();
 
-                    } while (b1.jaExisteLiv(IDlivro));
+                    } while (b1.jaExisteLivro(IDlivro));
                 }
 
                 // Criação do objeto Livro a partir das
@@ -149,7 +149,7 @@ public class Main {
 
                     } while (IDaluno <= 0);
                 }
-                if (b1.jaExisteAlu(IDaluno)) {
+                if (b1.jaExisteAluno(IDaluno)) {
                     do {
                         // Segunda condicional de validação caso
                         // ID digitado ja existir.
@@ -158,7 +158,7 @@ public class Main {
 
                         IDaluno = sc.nextInt();
 
-                    } while (b1.jaExisteAlu(IDaluno));
+                    } while (b1.jaExisteAluno(IDaluno));
                 }
                 // Criação do objeto Aluno a partir das
                 // Informações fornecidas pelo usuário.
