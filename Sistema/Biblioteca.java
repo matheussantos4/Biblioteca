@@ -38,6 +38,15 @@ public class Biblioteca {
         }
     }
 
+    public void MudarNomeAluno(int ID, String nome) {
+        for (int i = 0; i < alunos.size(); i++) {
+            if (alunos.get(i).getNumPessoa() == ID) {
+                alunos.get(i).setNome(nome);
+                break;
+            }
+        }
+    }
+
 
     // Verifica se já existe um aluno cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteAluno(int ID) {
