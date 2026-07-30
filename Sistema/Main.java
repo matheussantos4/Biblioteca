@@ -9,7 +9,7 @@ public class Main {
 
         Biblioteca b1 = new Biblioteca();
 
-        /* Objetos teste.
+        // bjetos teste
         Aluno a1 = new Aluno("Matheus", 01);
         Aluno a2 = new Aluno("Bruno", 92);
         Aluno a3 = new Aluno("Guilherme", 03);
@@ -19,7 +19,7 @@ public class Main {
         b1.adicionarAluno(a1);
         b1.adicionarAluno(a2);
         b1.adicionarAluno(a3);
-        b1.adicionarLivro(liv1); */
+        b1.adicionarLivro(liv1);
 
         int opcao = 0;
 
@@ -33,11 +33,13 @@ public class Main {
             System.out.println("(4) Adicionar aluno.");
             System.out.println("(5) Remover aluno.");
             System.out.println("(6) Listar alunos.");
-            System.out.println("(7) Sair.");
+            System.out.println("(7) Modificar Livro.");
+            System.out.println("(8) Modificar Aluno.");
+            System.out.println("(9) Sair.");
             opcao = sc.nextInt();
 
             // Definição das únicas opções existentes no programa.
-            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7) {
+            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7 && opcao != 8) {
                 System.out.println("Opção inválida.");
 
             } else if (opcao == 1) {
@@ -171,7 +173,7 @@ public class Main {
             } else if (opcao == 5) {
 
                 // Lógica de remoção Alunos.
-                System.out.println("Qual aluno quer remover ?");
+                System.out.println("Qual aluno quer remover?");
                 b1.listarAlunos();
                 System.out.print("Digite o ID: ");
 
@@ -194,12 +196,14 @@ public class Main {
                 b1.listarAlunos();
                 System.out.println();
             } else if (opcao == 7) {
+
+                // Lógica para modificação nome aluno.
                 System.out.println("Qual livro quer modificar?");
                 b1.listarLivros();
-                System.out.print("Digite o ID:");
+                System.out.print("Digite o ID: ");
                 int IDmodificarNomeLivro = sc.nextInt();
 
-                System.out.print("Qual novo nome do livro?");
+                System.out.print("Qual novo nome do livro? ");
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
                 b1.MudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
@@ -207,6 +211,7 @@ public class Main {
 
             } else if (opcao == 8) {
 
+                // Lógica para modificação nome aluno.
                 System.out.println("Qual aluno quer modificar? ");
                 b1.listarAlunos();
                 System.out.print("Digite o ID:");
@@ -218,8 +223,9 @@ public class Main {
                 b1.MudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
                 System.out.println("Cadastro atualizado!");
 
+            }
         }
-        while (opcao != 7);
+        while (opcao != 9);
 
         // Encerramento do programa.
         System.out.println("Saindo...");
