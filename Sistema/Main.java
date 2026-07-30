@@ -103,6 +103,8 @@ public class Main {
                 System.out.println("Livro removido!");
 
             } else if (opcao == 3) {
+
+                // Lista de livros.
                 b1.listarLivros();
                 System.out.println();
 
@@ -124,6 +126,7 @@ public class Main {
                 }
 
                 System.out.print("ID aluno: ");
+
                 int IDaluno = sc.nextInt();
 
                 if (IDaluno <= 0) {
@@ -135,7 +138,15 @@ public class Main {
 
                     } while (IDaluno <= 0);
                 }
+                if (b1.jaExiste(IDaluno)) {
+                    do {
+                        System.out.println("ID já existente.");
+                        System.out.print("Tente novamente: ");
 
+                        IDaluno = sc.nextInt();
+
+                    } while (b1.jaExiste(IDaluno));
+                }
                 // Criação do objeto Aluno a partir das
                 // Informações fornecidas pelo usuário.
 
@@ -171,7 +182,8 @@ public class Main {
                 System.out.println();
             }
 
-        } while (opcao != 7);
+        }
+        while (opcao != 7);
 
         // Encerramento do programa.
         System.out.println("Saindo...");
