@@ -25,6 +25,8 @@ public class Main {
 
         do {
 
+            // Adicionar CPF atrelado aos alunos, com impedimento de duplicação.
+
             // Opções funcionais disponíveis.
             System.out.println("Selecione uma opção");
             System.out.println("(1) Adicionar livro.");
