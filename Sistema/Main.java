@@ -193,6 +193,17 @@ public class Main {
             } else if (opcao == 6) {
                 b1.listarAlunos();
                 System.out.println();
+            } else if (opcao == 7) {
+                System.out.println("Qual livro quer modificar?");
+                b1.listarLivros();
+                System.out.print("Digite o ID:");
+                int IDmodificarNomeLivro = sc.nextInt();
+
+                System.out.print("Qual novo nome do livro?");
+                sc.nextLine();
+                String nomeNovo = sc.nextLine();
+                b1.MudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
+                System.out.println("Cadastro atualizado!");
             }
 
         }
