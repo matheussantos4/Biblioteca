@@ -1,15 +1,18 @@
 # Biblioteca
 
-Este repositório apresenta um sistema básico em Java desenvolvido para simular o funcionamento de uma biblioteca escolar ou comunitária. O projeto tem como objetivo organizar informações sobre alunos, livros e o acervo, permitindo registrar dados de forma simples e compreender a lógica de programação orientada a objetos.
+Este repositório apresenta um projeto simples em Java para simular o funcionamento de uma biblioteca, com foco em um CRUD básico para alunos e livros. A ideia é demonstrar, de forma prática, como estruturar um sistema utilizando conceitos fundamentais de orientação a objetos.
 
-A estrutura do projeto foi montada com classes principais que representam os elementos do sistema, como estudantes, obras literárias e a biblioteca em si. Dessa forma, o repositório serve tanto como exemplo prático de aplicação em Java quanto como base para estudos de modelagem de classes, atributos, métodos e interação entre objetos.
+## O que o sistema faz
 
-## Objetivo
+- Create: cadastra alunos e livros;
+- Read: lista os registros cadastrados;
+- Update: permite alterar o nome de alunos e livros;
+- Delete: remove alunos e livros do sistema.
+- Valida informações básicas, como IDs e nomes informados pelo usuário.
 
-Demonstrar de forma prática como criar um sistema pequeno, porém organizado, para gerenciar informações básicas de uma biblioteca utilizando conceitos fundamentais da linguagem Java.
+## Estrutura
 
-## Conteúdo
-
-- Cadastro e armazenamento de informações de alunos;
-- Registro de livros e dados básicos de cada obra;
-- Estrutura simples para representar o funcionamento de uma biblioteca.
+- Biblioteca: responsável por controlar o acervo e os alunos cadastrados;
+- Aluno: representa um estudante com nome e identificador;
+- Livro: representa uma obra com nome e identificador;
+- Main: contém o menu interativo do programa.
