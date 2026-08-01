@@ -41,7 +41,7 @@ public class Main {
             opcao = sc.nextInt();
 
             // Definição das únicas opções existentes no programa.
-            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7 && opcao != 8) {
+            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7 && opcao != 8 && opcao != 9) {
                 System.out.println("Opção inválida.");
 
             } else if (opcao == 1) {
@@ -197,6 +197,7 @@ public class Main {
             } else if (opcao == 6) {
                 b1.listarAlunos();
                 System.out.println();
+
             } else if (opcao == 7) {
 
                 // Lógica para modificação nome aluno.
