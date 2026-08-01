@@ -1,5 +1,6 @@
 package Sistema;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -63,17 +64,20 @@ public class Main {
                 }
 
                 System.out.print("Digite o ID do livro: ");
-
                 int IDlivro = sc.nextInt();
 
                 if (IDlivro <= 0) {
                     do {
-                        // Condicional apenas se ID não estiver de acordo.
-                        System.out.println("ID inválido.");
-                        System.out.print("Tente novamente: ");
+                        try {
+                            // Condicional apenas se ID não estiver de acordo.
 
-                        IDlivro = sc.nextInt();
+                            System.out.println("ID inválido.");
+                            System.out.print("Tente novamente: ");
+                            IDlivro = sc.nextInt();
 
+                        } catch (InputMismatchException e) {
+                            sc.nextLine();
+                        }
                     } while (IDlivro <= 0);
                 }
                 if (b1.jaExisteLivro(IDlivro)) {
