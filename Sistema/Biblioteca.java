@@ -84,18 +84,30 @@ public class Biblioteca {
     // Listar todos livros de acordo com oque há no array.
     public void listarLivros() {
 
-        //para cada Livro (que vou chamar de livro) dentro de acervo
-        for (Livro livro : acervo) {
-            System.out.printf(" ID:" + (livro.getNumCadastro()) + " Nome:" + livro.getNome() + "%n");
+        if (acervo.isEmpty()) {
+            System.out.println();
+            System.out.println("Não há livros cadastrados!");
+            System.out.println();
+        } else {
+            //para cada Livro (que vou chamar de livro) dentro de acervo
+            for (Livro livro : acervo) {
+                System.out.printf(" ID:" + (livro.getNumCadastro()) + " Nome:" + livro.getNome() + "%n");
+            }
         }
     }
 
     // Listar todos Alunos de acordo com oque há no array.
     public void listarAlunos() {
 
-        //para cada Aluno (que vou chamar de aluno) dentro de alunos
-        for (Aluno aluno : alunos) {
-            System.out.printf(" ID:" + aluno.getNumPessoa() + " Nome:" + aluno.getNome() + " %n");
+        if (alunos.isEmpty()) {
+            System.out.println();
+            System.out.println("Não há alunos cadastrados!");
+            System.out.println();
+        } else {
+            //para cada Aluno (que vou chamar de aluno) dentro de alunos
+            for (Aluno aluno : alunos) {
+                System.out.printf(" ID:" + aluno.getNumPessoa() + " Nome:" + aluno.getNome() + " %n");
+            }
         }
     }
 
