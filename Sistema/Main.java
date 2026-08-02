@@ -10,18 +10,6 @@ public class Main {
 
         Biblioteca b1 = new Biblioteca();
 
-        // bjetos teste
-        Aluno a1 = new Aluno("Matheus", 01);
-        Aluno a2 = new Aluno("Bruno", 92);
-        Aluno a3 = new Aluno("Guilherme", 03);
-
-        Livro liv1 = new Livro("Teste", 92);
-
-        b1.adicionarAluno(a1);
-        b1.adicionarAluno(a2);
-        b1.adicionarAluno(a3);
-        b1.adicionarLivro(liv1);
-
         int opcao = 0;
 
         do {
@@ -39,6 +27,7 @@ public class Main {
             System.out.println("(7) Modificar Livro.");
             System.out.println("(8) Modificar Aluno.");
             System.out.println("(9) Sair.");
+            System.out.print("Opcão: ");
             opcao = sc.nextInt();
 
             // Definição das únicas opções existentes no programa.
@@ -159,7 +148,7 @@ public class Main {
 
             } else if (opcao == 7) {
 
-                // Lógica para modificação nome aluno.
+                // Lógica para modificação nome livro.
                 System.out.println("Qual livro quer modificar?");
                 b1.listarLivros();
                 System.out.print("Digite o ID: ");
@@ -168,7 +157,7 @@ public class Main {
                 System.out.print("Qual novo nome do livro? ");
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
-                b1.MudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
+                b1.mudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
                 System.out.println("Cadastro atualizado!");
 
             } else if (opcao == 8) {
@@ -182,7 +171,7 @@ public class Main {
                 System.out.print("Qual novo nome do aluno? ");
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
-                b1.MudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
+                b1.mudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
                 System.out.println("Cadastro atualizado!");
 
             }
