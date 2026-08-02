@@ -83,23 +83,19 @@ public class Biblioteca {
 
     // Listar todos livros de acordo com oque há no array.
     public void listarLivros() {
-        for (int i = 0; i < acervo.size(); i++) {
-            /* Do array acervo, consiga o nome
-            através do metodo get com a ajuda
-            do posicionamento do contador i.
-             */
-            System.out.printf(" ID:" + (acervo.get(i).getNumCadastro()) + " Nome:" + acervo.get(i).getNome() + "%n");
+
+        //para cada Livro (que vou chamar de livro) dentro de acervo
+        for (Livro livro : acervo) {
+            System.out.printf(" ID:" + (livro.getNumCadastro()) + " Nome:" + livro.getNome() + "%n");
         }
     }
 
     // Listar todos Alunos de acordo com oque há no array.
     public void listarAlunos() {
-        for (int i = 0; i < alunos.size(); i++) {
-            /* Do array alunos, consiga o nome
-            através do metodo get com a ajuda
-            do posicionamento do contador i.
-             */
-            System.out.printf(" ID:" + alunos.get(i).getNumPessoa() + " Nome:" + alunos.get(i).getNome() + " %n");
+
+        //para cada Aluno (que vou chamar de aluno) dentro de alunos
+        for (Aluno aluno : alunos) {
+            System.out.printf(" ID:" + aluno.getNumPessoa() + " Nome:" + aluno.getNome() + " %n");
         }
     }
 
