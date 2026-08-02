@@ -149,7 +149,7 @@ public class Biblioteca {
             if (jaExisteAluno(IDAluno)) {
                 System.out.println("ID já existente!");
             }
-        } while (IDAluno <= 0);
+        } while (IDAluno <= 0 || jaExisteAluno(IDAluno));
         return IDAluno;
     }
 }

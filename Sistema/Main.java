@@ -63,37 +63,15 @@ public class Main {
                     } while (nome == null || nome.isBlank());
                 }
 
-                int IDlivro = 0;
-                System.out.print("Digite o ID do livro: ");
-                do {
-                    try {
-                        // Condicional apenas se ID não estiver de acordo.
-                        IDlivro = sc.nextInt();
+                int IDlivro = b1.lerIDLivroValidado(sc);
 
-                        if (IDlivro <= 0) {
-                            System.out.println("ID inválido.");
-                            System.out.print("Tente novamente: ");
-                        }
-
-                    } catch (InputMismatchException e) {
-                        sc.nextLine();
-                        System.out.println("ID inválido.");
-                        System.out.print("Tente novamente: ");
-                        continue;
-                    }
-                    if (b1.jaExisteLivro(IDlivro)) {
-
-                        System.out.println("ID já existente.");
-                        System.out.print("Tente novamente: ");
-                    }
-                } while (IDlivro <= 0 || b1.jaExisteLivro(IDlivro));
-                
                 // Criação do objeto Livro a partir das
                 // Informações fornecidas pelo usuário.
 
                 Livro livronovo = new Livro(nome, IDlivro);
                 b1.adicionarLivro(livronovo);
 
+                System.out.println();
                 System.out.println("Livro adicionado!");
                 System.out.println();
 
@@ -141,37 +119,17 @@ public class Main {
                     } while (nomealuno == null || nomealuno.isBlank());
                 }
 
-                System.out.print("ID aluno: ");
+                int IDaluno = b1.lerIDAlunoValidado(sc);
 
-                int IDaluno = sc.nextInt();
-
-                if (IDaluno <= 0) {
-                    do {
-                        // Condicional apenas se ID não estiver de acordo.
-                        System.out.println("ID inválido.");
-                        System.out.print("Tente novamente: ");
-                        IDaluno = sc.nextInt();
-
-                    } while (IDaluno <= 0);
-                }
-                if (b1.jaExisteAluno(IDaluno)) {
-                    do {
-                        // Segunda condicional de validação caso
-                        // ID digitado ja existir.
-                        System.out.println("ID já existente.");
-                        System.out.print("Tente novamente: ");
-
-                        IDaluno = sc.nextInt();
-
-                    } while (b1.jaExisteAluno(IDaluno));
-                }
                 // Criação do objeto Aluno a partir das
                 // Informações fornecidas pelo usuário.
 
                 Aluno alunonovo = new Aluno(nomealuno, IDaluno);
                 b1.adicionarAluno(alunonovo);
 
+                System.out.println();
                 System.out.println("Aluno adicionado!");
+                System.out.println();
 
             } else if (opcao == 5) {
 
