@@ -1,6 +1,7 @@
 package Sistema;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Biblioteca {
 
@@ -105,5 +106,9 @@ public class Biblioteca {
 
             System.out.printf(" ID:" + alunos.get(i).getNumPessoa() + " Nome:" + alunos.get(i).getNome() + " %n");
         }
+    }
+
+    public int lerIDLivroValidado(Scanner sc, int ID) {
+        
     }
 }
