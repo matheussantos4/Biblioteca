@@ -189,10 +189,28 @@ public class Main {
                 // Lógica para modificação nome livro.
                 System.out.println("Qual livro quer modificar?");
                 b1.listarLivros();
-                System.out.print("Digite o ID: ");
-                int IDmodificarNomeLivro = sc.nextInt();
 
-                System.out.print("Qual novo nome do livro? ");
+                int IDmodificarNomeLivro = 0;
+                do {
+                    try {
+                        System.out.print("Digite o ID: ");
+                        IDmodificarNomeLivro = sc.nextInt();
+
+                        if (IDmodificarNomeLivro <= 0) {
+                            System.out.println("ID inválido.");
+                            continue;
+                        }
+                    } catch (InputMismatchException e) {
+                        sc.nextLine();
+                        System.out.println("ID inválido.");
+                        continue;
+                    }
+                    if (!b1.jaExisteLivro(IDmodificarNomeLivro)) {
+                        System.out.println("ID inexistente.");
+                    }
+                } while (IDmodificarNomeLivro <= 0 || !b1.jaExisteLivro(IDmodificarNomeLivro));
+
+                System.out.print("Digite o novo nome do livro: ");
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
                 b1.mudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
