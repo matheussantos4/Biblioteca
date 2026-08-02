@@ -146,24 +146,33 @@ public class Main {
                 System.out.println();
                 System.out.println("Aluno adicionado!");
                 System.out.println();
+
             } else if (opcao == 5) {
 
                 // Lógica de remoção Alunos.
                 System.out.println("Qual aluno quer remover?");
                 b1.listarAlunos();
-                System.out.print("Digite o ID: ");
-
-                int idRemover = sc.nextInt();
 
                 // Condicional apenas se ID não estiver de acordo.
-                if (idRemover <= 0) {
-                    do {
-                        System.out.println("ID inválido.");
-                        System.out.print("Tente novamente: ");
+                int idRemover = 0;
+                do {
+                    try {
+                        System.out.print("Digite o ID: ");
                         idRemover = sc.nextInt();
+                        if (idRemover <= 0) {
+                            System.out.println("ID inválido.");
+                            continue;
+                        }
 
-                    } while (idRemover <= 0);
-                }
+                    } catch (InputMismatchException e) {
+                        System.out.println("ID inválido.");
+                        sc.nextLine();
+                        continue;
+                    }
+                    if (!b1.jaExisteAluno(idRemover)) {
+                        System.out.println("ID inexistente.");
+                    }
+                } while (idRemover <= 0 || !b1.jaExisteAluno(idRemover));
 
                 b1.removerAluno(idRemover);
 
