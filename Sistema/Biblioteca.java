@@ -128,8 +128,30 @@ public class Biblioteca {
             if (jaExisteLivro(IDLivro)) {
                 System.out.println("ID já existente!");
             }
-
         } while (IDLivro <= 0 || jaExisteLivro(IDLivro));
         return IDLivro;
+
+    }
+
+    public int lerIDAlunoValidado(Scanner sc) {
+        int IDAluno = 0;
+        do {
+            try {
+
+                System.out.print("Digite o ID: ");
+                IDAluno = sc.nextInt();
+                if (IDAluno <= 0) {
+                    System.out.println("ID Inválido.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("ID Inválido.");
+                sc.nextLine();
+                continue;
+            }
+            if (jaExisteAluno(IDAluno)) {
+                System.out.println("ID já existente!");
+            }
+        } while (IDAluno <= 0);
+        return IDAluno;
     }
 }
