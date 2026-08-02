@@ -84,14 +84,19 @@ public class Main {
 
                         if (IDremover <= 0) {
                             System.out.println("ID inválido.");
+                            continue;
                         }
 
                         // Depois se há algum caractere.
                     } catch (InputMismatchException e) {
                         System.out.println("ID inválido.");
                         sc.nextLine();
+                        continue;
                     }
-                } while (IDremover <= 0);
+                    if (!b1.jaExisteLivro(IDremover)) {
+                        System.out.println("ID inexistente.");
+                    }
+                } while (IDremover <= 0 || !b1.jaExisteLivro(IDremover));
 
                 // Remoção do livro propriamente dito.
                 b1.removerLivro(IDremover);
@@ -134,7 +139,6 @@ public class Main {
                 System.out.println();
                 System.out.println("Aluno adicionado!");
                 System.out.println();
-
             } else if (opcao == 5) {
 
                 // Lógica de remoção Alunos.
