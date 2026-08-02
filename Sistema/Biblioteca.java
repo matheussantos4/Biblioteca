@@ -89,10 +89,12 @@ public class Biblioteca {
             System.out.println("Não há livros cadastrados!");
             System.out.println();
         } else {
+            System.out.println();
             //para cada Livro (que vou chamar de livro) dentro de acervo
             for (Livro livro : acervo) {
                 System.out.printf(" ID:" + (livro.getNumCadastro()) + " Nome:" + livro.getNome() + "%n");
             }
+            System.out.println();
         }
     }
 
@@ -104,10 +106,12 @@ public class Biblioteca {
             System.out.println("Não há alunos cadastrados!");
             System.out.println();
         } else {
+            System.out.println();
             //para cada Aluno (que vou chamar de aluno) dentro de alunos
             for (Aluno aluno : alunos) {
                 System.out.printf(" ID:" + aluno.getNumPessoa() + " Nome:" + aluno.getNome() + " %n");
             }
+            System.out.println();
         }
     }
 
