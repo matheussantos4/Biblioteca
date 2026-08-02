@@ -1,6 +1,7 @@
 package Sistema;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Biblioteca {
@@ -108,7 +109,27 @@ public class Biblioteca {
         }
     }
 
-    public int lerIDLivroValidado(Scanner sc, int ID) {
-        
+    public int lerIDLivroValidado(Scanner sc) {
+        int IDLivro = 0;
+        do {
+            try {
+
+                System.out.print("Digite o ID: ");
+                IDLivro = sc.nextInt();
+                if (IDLivro <= 0) {
+                    System.out.println("ID Inválido.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("ID Inválido.");
+                sc.nextLine();
+                continue;
+
+            }
+            if (jaExisteLivro(IDLivro)) {
+                System.out.println("ID já existente!");
+            }
+
+        } while (IDLivro <= 0 || jaExisteLivro(IDLivro));
+        return IDLivro;
     }
 }
