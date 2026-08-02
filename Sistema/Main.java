@@ -116,7 +116,6 @@ public class Main {
 
                 // Lista de livros.
                 b1.listarLivros();
-                System.out.println();
 
             } else if (opcao == 4) {
 
@@ -181,8 +180,9 @@ public class Main {
                 System.out.println();
 
             } else if (opcao == 6) {
+
+                // Lista de alunos.
                 b1.listarAlunos();
-                System.out.println();
 
             } else if (opcao == 7) {
 
