@@ -53,8 +53,8 @@ public class Biblioteca {
 
     // Verifica se já existe um aluno cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteAluno(int ID) {
-        for (int i = 0; i < alunos.size(); i++) {
-            if (alunos.get(i).getNumPessoa() == ID) {
+        for (Aluno aluno : alunos) {
+            if (aluno.getNumPessoa() == ID) {
                 return true;
             }
         }
@@ -63,8 +63,8 @@ public class Biblioteca {
 
     // Verifica se já existe um livro cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteLivro(int ID) {
-        for (int i = 0; i < acervo.size(); i++) {
-            if (acervo.get(i).getNumCadastro() == ID) {
+        for (Livro livro : acervo) {
+            if (livro.getNumCadastro() == ID) {
                 return true;
             }
         }
