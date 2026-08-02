@@ -70,20 +70,26 @@ public class Main {
             } else if (opcao == 2) {
 
                 // Lógica da remoção dos livros.
+
                 System.out.println("Qual livro quer remover ?");
                 b1.listarLivros();
-                System.out.print("Digite o ID: ");
 
-                int IDremover = sc.nextInt();
+                int IDremover = 0;
+                do {
+                    try {
 
-                if (IDremover <= 0) {
-                    do {
-                        System.out.println("ID inválido.");
-                        System.out.print("Tente novamente: ");
+                        System.out.print("Digite o ID: ");
                         IDremover = sc.nextInt();
 
-                    } while (IDremover <= 0);
-                }
+                        if (IDremover <= 0) {
+                            System.out.println("ID inválido.");
+                        }
+
+                    } catch (InputMismatchException e) {
+                        System.out.println("ID inválido.");
+                        sc.nextLine();
+                    }
+                } while (IDremover <= 0);
 
                 b1.removerLivro(IDremover);
 
