@@ -140,7 +140,10 @@ public class Main {
                 }
 
                 b1.removerAluno(idRemover);
+
+                System.out.println();
                 System.out.println("Aluno removido!");
+                System.out.println();
 
             } else if (opcao == 6) {
                 b1.listarAlunos();
@@ -158,7 +161,10 @@ public class Main {
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
                 b1.mudarNomeLivro(IDmodificarNomeLivro, nomeNovo);
+
+                System.out.println();
                 System.out.println("Cadastro atualizado!");
+                System.out.println();
 
             } else if (opcao == 8) {
 
@@ -172,7 +178,10 @@ public class Main {
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
                 b1.mudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
+
+                System.out.println();
                 System.out.println("Cadastro atualizado!");
+                System.out.println();
 
             }
         }
