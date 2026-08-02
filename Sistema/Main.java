@@ -32,7 +32,10 @@ public class Main {
 
             // Definição das únicas opções existentes no programa.
             if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7 && opcao != 8 && opcao != 9) {
+
+                System.out.println();
                 System.out.println("Opção inválida.");
+                System.out.println();
 
             } else if (opcao == 1) {
 
@@ -83,7 +86,10 @@ public class Main {
                 }
 
                 b1.removerLivro(IDremover);
+
+                System.out.println();
                 System.out.println("Livro removido!");
+                System.out.println();
 
             } else if (opcao == 3) {
 
