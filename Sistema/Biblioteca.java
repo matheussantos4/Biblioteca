@@ -32,7 +32,7 @@ public class Biblioteca {
     }
 
     // Lógica metodo para modificação nome livro.
-    public void MudarNomeLivro(int ID, String nome) {
+    public void mudarNomeLivro(int ID, String nome) {
         for (int i = 0; i < acervo.size(); i++) {
             if (acervo.get(i).getNumCadastro() == ID) {
                 acervo.get(i).setNome(nome);
@@ -42,7 +42,7 @@ public class Biblioteca {
     }
 
     // Lógica metodo para modificação nome aluno.
-    public void MudarNomeAluno(int ID, String nome) {
+    public void mudarNomeAluno(int ID, String nome) {
         for (int i = 0; i < alunos.size(); i++) {
             if (alunos.get(i).getNumPessoa() == ID) {
                 alunos.get(i).setNome(nome);
@@ -50,7 +50,6 @@ public class Biblioteca {
             }
         }
     }
-
 
     // Verifica se já existe um aluno cadastrado com esse ID (evita duplicatas)
     public boolean jaExisteAluno(int ID) {
@@ -90,7 +89,6 @@ public class Biblioteca {
             do posicionamento do contador i.
              */
             System.out.printf(" ID:" + (acervo.get(i).getNumCadastro()) + " Nome:" + acervo.get(i).getNome() + "%n");
-
         }
     }
 
@@ -110,7 +108,6 @@ public class Biblioteca {
         int IDLivro = 0;
         do {
             try {
-
                 System.out.print("Digite o ID: ");
                 IDLivro = sc.nextInt();
                 if (IDLivro <= 0) {
@@ -120,7 +117,6 @@ public class Biblioteca {
                 System.out.println("ID Inválido.");
                 sc.nextLine();
                 continue;
-
             }
             if (jaExisteLivro(IDLivro)) {
                 System.out.println("ID já existente!");
@@ -135,7 +131,6 @@ public class Biblioteca {
         int IDAluno = 0;
         do {
             try {
-
                 System.out.print("Digite o ID: ");
                 IDAluno = sc.nextInt();
                 if (IDAluno <= 0) {
