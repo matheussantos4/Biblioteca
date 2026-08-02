@@ -13,25 +13,32 @@ public class Main {
         int opcao = 0;
 
         do {
+            try {
 
-            // Adicionar CPF atrelado aos alunos, com impedimento de duplicação.
+                // Opções funcionais disponíveis.
+                System.out.println("Selecione uma opção");
+                System.out.println("(1) Adicionar livro.");
+                System.out.println("(2) Remover livro.");
+                System.out.println("(3) Listar livros.");
+                System.out.println("(4) Adicionar aluno.");
+                System.out.println("(5) Remover aluno.");
+                System.out.println("(6) Listar alunos.");
+                System.out.println("(7) Modificar Livro.");
+                System.out.println("(8) Modificar Aluno.");
+                System.out.println("(9) Sair.");
+                System.out.print("Opcão: ");
+                opcao = sc.nextInt();
 
-            // Opções funcionais disponíveis.
-            System.out.println("Selecione uma opção");
-            System.out.println("(1) Adicionar livro.");
-            System.out.println("(2) Remover livro.");
-            System.out.println("(3) Listar livros.");
-            System.out.println("(4) Adicionar aluno.");
-            System.out.println("(5) Remover aluno.");
-            System.out.println("(6) Listar alunos.");
-            System.out.println("(7) Modificar Livro.");
-            System.out.println("(8) Modificar Aluno.");
-            System.out.println("(9) Sair.");
-            System.out.print("Opcão: ");
-            opcao = sc.nextInt();
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+                System.out.println();
+                System.out.println("Opção inválida.");
+                System.out.println();
+                continue;
+            }
 
             // Definição das únicas opções existentes no programa.
-            if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao != 5 && opcao != 6 && opcao != 7 && opcao != 8 && opcao != 9) {
+            if (opcao <= 0 || opcao > 9) {
 
                 System.out.println();
                 System.out.println("Opção inválida.");
@@ -201,7 +208,6 @@ public class Main {
                 System.out.println();
                 System.out.println("Cadastro atualizado!");
                 System.out.println();
-
             }
         }
         while (opcao != 9);
