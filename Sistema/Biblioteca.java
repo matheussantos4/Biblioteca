@@ -85,12 +85,10 @@ public class Biblioteca {
     // Listar todos livros de acordo com oque há no array.
     public void listarLivros() {
         for (int i = 0; i < acervo.size(); i++) {
-
             /* Do array acervo, consiga o nome
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
-
             System.out.printf(" ID:" + (acervo.get(i).getNumCadastro()) + " Nome:" + acervo.get(i).getNome() + "%n");
 
         }
@@ -99,16 +97,15 @@ public class Biblioteca {
     // Listar todos Alunos de acordo com oque há no array.
     public void listarAlunos() {
         for (int i = 0; i < alunos.size(); i++) {
-
             /* Do array alunos, consiga o nome
             através do metodo get com a ajuda
             do posicionamento do contador i.
              */
-
             System.out.printf(" ID:" + alunos.get(i).getNumPessoa() + " Nome:" + alunos.get(i).getNome() + " %n");
         }
     }
 
+    // Validação de ID do livro.
     public int lerIDLivroValidado(Scanner sc) {
         int IDLivro = 0;
         do {
@@ -133,6 +130,7 @@ public class Biblioteca {
 
     }
 
+    // Validação de ID do aluno.
     public int lerIDAlunoValidado(Scanner sc) {
         int IDAluno = 0;
         do {
