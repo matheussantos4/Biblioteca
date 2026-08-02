@@ -206,14 +206,32 @@ public class Main {
                 // Lógica para modificação nome aluno.
                 System.out.println("Qual aluno quer modificar? ");
                 b1.listarAlunos();
-                System.out.print("Digite o ID:");
-                int IDmodificarNomeAluno = sc.nextInt();
 
-                System.out.print("Qual novo nome do aluno? ");
+                int IDmodificarNomeAluno = 0;
+                do {
+                    try {
+                        System.out.print("Digite o ID: ");
+                        IDmodificarNomeAluno = sc.nextInt();
+
+                        if (IDmodificarNomeAluno <= 0) {
+                            System.out.println("ID inválido.");
+                            continue;
+                        }
+                    } catch (InputMismatchException e) {
+                        sc.nextLine();
+                        System.out.println("ID inválido.");
+                        continue;
+                    }
+                    if (!b1.jaExisteAluno(IDmodificarNomeAluno)) {
+                        System.out.println("ID inexistente.");
+                    }
+                } while (IDmodificarNomeAluno <= 0 || !b1.jaExisteAluno(IDmodificarNomeAluno));
+
+                System.out.print("Digite o novo nome do aluno: ");
                 sc.nextLine();
                 String nomeNovo = sc.nextLine();
-                b1.mudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
 
+                b1.mudarNomeAluno(IDmodificarNomeAluno, nomeNovo);
                 System.out.println();
                 System.out.println("Cadastro atualizado!");
                 System.out.println();
