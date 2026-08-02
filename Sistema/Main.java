@@ -78,6 +78,7 @@ public class Main {
                 do {
                     try {
 
+                        // Primeiro verificação se é menor que 0
                         System.out.print("Digite o ID: ");
                         IDremover = sc.nextInt();
 
@@ -85,12 +86,14 @@ public class Main {
                             System.out.println("ID inválido.");
                         }
 
+                        // Depois se há algum caractere.
                     } catch (InputMismatchException e) {
                         System.out.println("ID inválido.");
                         sc.nextLine();
                     }
                 } while (IDremover <= 0);
 
+                // Remoção do livro propriamente dito.
                 b1.removerLivro(IDremover);
 
                 System.out.println();
