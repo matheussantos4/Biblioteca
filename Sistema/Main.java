@@ -63,34 +63,31 @@ public class Main {
                     } while (nome == null || nome.isBlank());
                 }
 
+                int IDlivro = 0;
                 System.out.print("Digite o ID do livro: ");
-                int IDlivro = sc.nextInt();
-
-                if (IDlivro <= 0) {
-                    do {
-                        try {
-                            // Condicional apenas se ID não estiver de acordo.
-
-                            System.out.println("ID inválido.");
-                            System.out.print("Tente novamente: ");
-                            IDlivro = sc.nextInt();
-
-                        } catch (InputMismatchException e) {
-                            sc.nextLine();
-                        }
-                    } while (IDlivro <= 0);
-                }
-                if (b1.jaExisteLivro(IDlivro)) {
-                    do {
-                        // Segunda condicional de validação caso
-                        // ID digitado ja existir.
-                        System.out.println("ID já existente.");
-                        System.out.print("Tente novamente: ");
+                do {
+                    try {
+                        // Condicional apenas se ID não estiver de acordo.
                         IDlivro = sc.nextInt();
 
-                    } while (b1.jaExisteLivro(IDlivro));
-                }
+                        if (IDlivro <= 0) {
+                            System.out.println("ID inválido.");
+                            System.out.print("Tente novamente: ");
+                        }
 
+                    } catch (InputMismatchException e) {
+                        sc.nextLine();
+                        System.out.println("ID inválido.");
+                        System.out.print("Tente novamente: ");
+                        continue;
+                    }
+                    if (b1.jaExisteLivro(IDlivro)) {
+
+                        System.out.println("ID já existente.");
+                        System.out.print("Tente novamente: ");
+                    }
+                } while (IDlivro <= 0 || b1.jaExisteLivro(IDlivro));
+                
                 // Criação do objeto Livro a partir das
                 // Informações fornecidas pelo usuário.
 
